@@ -14,7 +14,7 @@ export default defineConfig(({ mode }) => ({
     mode === 'development' &&
     componentTagger(),
   ].filter(Boolean),
-  base: '/',
+  base: '',
   build: {
     chunkSizeWarningLimit: 1000,
     rollupOptions: {
