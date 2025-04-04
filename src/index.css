@@ -1,0 +1,199 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Default light theme */
+  .theme-default {
+    --background: 210 45% 98%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 213 90% 35%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 204 94% 57%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 336 74% 69%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 213 90% 35%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 204 94% 57%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 213 80% 20%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 213 80% 40%;
+    --sidebar-ring: 204 94% 70%;
+  }
+
+  /* Dark theme */
+  .theme-dark, .dark {
+    --background: 213 80% 10%;
+    --foreground: 210 40% 98%;
+
+    --card: 213 80% 12%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 213 80% 12%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 213 90% 35%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 204 94% 57%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 336 74% 69%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+
+    --sidebar-background: 213 80% 20%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 204 94% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 213 70% 30%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 213 70% 25%;
+    --sidebar-ring: 204 94% 70%;
+  }
+
+  /* Gradient theme */
+  .theme-gradient {
+    --background: 225 100% 98%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 263 90% 51%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 246 100% 77%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 340 82% 76%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 263 90% 51%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 246 100% 77%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 263 80% 30%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 263 80% 40%;
+    --sidebar-ring: 246 100% 85%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+/* Gradient backgrounds for theme-gradient */
+.theme-gradient .gradient-header {
+  @apply bg-gradient-to-r from-purple-500 to-blue-500;
+}
+
+.theme-gradient .gradient-card {
+  @apply bg-gradient-to-br from-blue-50 to-purple-50 border-blue-200;
+}
+
+.theme-gradient .gradient-sidebar {
+  @apply bg-gradient-to-b from-[#6366f1] to-[#8b5cf6];
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Dark mode scrollbar */
+.dark ::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Layouts */
+.horizontal-layout .main-content {
+  margin-left: 0;
+}
+
+.horizontal-layout .sidebar-menu {
+  display: none;
+}
+
+.horizontal-layout .horizontal-menu {
+  display: flex;
+}
