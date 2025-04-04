@@ -29,7 +29,7 @@ const queryClient = new QueryClient();
 
 const App = () => {
   return (
-    <BrowserRouter basename="/School">
+    <BrowserRouter>
       <QueryClientProvider client={queryClient}>
         <AuthProvider>
           <ThemeAndLayoutProvider>
